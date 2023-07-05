@@ -1,0 +1,62 @@
+/* CLASSI RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/******************** TOP CONTENT ********************/
+#top-content {
+  display: flex;
+}
+/* CASSI NAVBAR */
+.sidebar {
+  background-color: #000000;
+  width: 300px;
+  color: #6b6b6b;
+  display: flex;
+}
+.container {
+  flex-direction: column;
+  height: calc(100vh - 100px);
+}
+/* CASSI MAIN CONTENT */
+.main-content {
+  height: calc(100vh - 100px);
+  width: calc(100% - 300px);
+  background-color: #141922;
+  display: flex;
+}
+header {
+  height: 100px;
+  background-color: #080b12;
+  width: 100%;
+}
+/* CASSI FOOTER */
+footer {
+  background-color: #282828;
+  height: 100px;
+}
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+#footer-left {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: calc(100% / 3);
+  gap: 20px;
+  color: gray;
+}
+.img-footer {
+  width: 50px;
+  display: flex;
+}
+#footer-left h4 {
+  color: white;
+}
+.footer-icons i {
+  margin: 0 10px;
+}
