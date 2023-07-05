@@ -42,6 +42,7 @@ footer {
   justify-content: space-between;
   margin: 0 10px;
 }
+/* CASSI FOOTER LEFT */
 #footer-left {
   display: flex;
   align-items: center;
@@ -59,4 +60,74 @@ footer {
 }
 .footer-icons i {
   margin: 0 10px;
+}
+/* CASSI FOOTER CENTER */
+
+#footer-center {
+  height: 100px;
+  width: calc(100% / 3 * 2);
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.center-up {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  align-items: center;
+}
+.play {
+  font-size: 2rem;
+}
+.center-up > * {
+  margin: 0 10px;
+}
+
+#footer-right {
+  height: 100px;
+  width: calc(100% / 3);
+  gap: 20px;
+}
+.center-down {
+  color: white;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.center-down > * {
+  margin: 0 10px;
+  font-size: 0.7rem;
+}
+
+.time-bar {
+  height: 2px;
+  width: 300px;
+  background-color: gray;
+}
+
+.min {
+  height: 2px;
+  width: 100px;
+  background-color: white;
+}
+/* CASSI FOOTER RIGHT */
+#footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: white;
+}
+
+.time-bar-small {
+  height: 2px;
+  width: 100px;
+  background-color: gray;
+}
+
+.min-small {
+  height: 2px;
+  width: 33px;
+  background-color: white;
 }
