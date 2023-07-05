@@ -39,10 +39,11 @@ footer {
 }
 .container-footer {
   display: flex;
-  justify-content: space-between;
-  margin: 0 10px;
+
+  margin: 0 20px;
 }
 /* CASSI FOOTER LEFT */
+
 #footer-left {
   display: flex;
   align-items: center;
@@ -65,7 +66,7 @@ footer {
 
 #footer-center {
   height: 100px;
-  width: calc(100% / 3 * 2);
+  width: calc(100% / 3);
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -85,16 +86,12 @@ footer {
   margin: 0 10px;
 }
 
-#footer-right {
-  height: 100px;
-  width: calc(100% / 3);
-  gap: 20px;
-}
 .center-down {
   color: white;
   flex-direction: row;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .center-down > * {
   margin: 0 10px;
@@ -118,6 +115,9 @@ footer {
   align-items: center;
   justify-content: end;
   color: white;
+  width: calc(100% / 3);
+  height: 100px;
+  gap: 20px;
 }
 
 .time-bar-small {
@@ -130,4 +130,12 @@ footer {
   height: 2px;
   width: 33px;
   background-color: white;
+}
+
+/* CLASSI RESPONSIVE */
+/* TABLET */
+@media screen and (max-width: 991px) {
+  .container-footer {
+    font-size: 0.7rem;
+  }
 }
