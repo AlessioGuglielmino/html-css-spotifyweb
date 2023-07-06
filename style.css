@@ -5,6 +5,25 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lime;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lime;
+}
 
 /******************** TOP CONTENT ********************/
 #top-content {
@@ -55,6 +74,9 @@
   align-items: center;
   gap: 15px;
 }
+.one-low {
+  overflow: auto;
+}
 
 .one-low ul {
   list-style: none;
@@ -85,11 +107,102 @@
   width: calc(100% - 300px);
   background-color: #141922;
   display: flex;
+  flex-direction: column;
 }
+.container-categorie {
+  color: gray;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+
+  font-weight: bolder;
+}
+.categorie {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+.small-bar {
+  width: 50%;
+  height: 2px;
+  background-color: lime;
+  /* display: none; */
+}
+/* .categorie:hover + {
+  display: block;
+} */
+/* CASSI ALBUMS */
+.container-album {
+  width: 100%;
+  padding: 0 1rem;
+  overflow: auto;
+}
+.container-album > h2 {
+  color: white;
+  margin: 2% 0;
+}
+.row {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: calc(100% / 6);
+}
+.album-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.album-card > h4 {
+  color: white;
+}
+.album-card > span {
+  color: gray;
+}
+.container-album > img {
+  width: 100%;
+}
+
+.info {
+  color: gray;
+  font-weight: bold;
+}
+.circle-pic > img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.circle-pic {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* CASSI HEADER */
 header {
   height: 100px;
-  background-color: #080b12;
+  background-color: rgba(8, 11, 18, 0.5);
   width: 100%;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+.container-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+.upgrade-button {
+  padding: 10px 25px;
+  border: solid white;
+  color: white;
+  border-radius: 15px;
 }
 /* CASSI FOOTER */
 footer {
@@ -138,9 +251,7 @@ footer {
   font-size: 1.2rem;
   align-items: center;
 }
-.play {
-  font-size: 2rem;
-}
+
 .center-up > * {
   margin: 0 10px;
 }
@@ -194,6 +305,7 @@ footer {
 /* CLASSI RESPONSIVE */
 /*************** TABLET *******************/
 /****** FOOTER ********/
+/* SIZE - M (TABLET)  */
 @media screen and (max-width: 991px) {
   .container-footer {
     font-size: 0.7rem;
@@ -205,11 +317,20 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  #footer-center > * {
+    font-size: 0.9rem;
+  }
 }
 /* SIZE - xS  */
 @media screen and (max-width: 576px) {
   .song-name {
     display: flex;
     flex-direction: column;
+  }
+  .container-footer > * {
+    font-size: 0.5rem;
+  }
+  #footer-center > * {
+    font-size: 0.8rem;
   }
 }
