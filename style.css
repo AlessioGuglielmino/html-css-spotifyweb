@@ -43,8 +43,20 @@
   padding: 20px;
   height: 100%;
 }
+.container-sidebar-media {
+  flex-direction: column;
+  display: flex;
+  padding: 10px;
+  height: 100%;
+  width: 150px;
+  align-items: center;
+  display: none;
+}
 .logo {
   width: 150px;
+}
+.container-sidebar-media img {
+  width: 30px;
 }
 .home {
   color: white;
@@ -114,15 +126,20 @@
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+  flex-wrap: wrap;
 
   font-weight: bolder;
 }
 .categorie {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 25px;
   align-items: center;
+  width: calc(100% / 6);
+  white-space: nowrap;
+  font-size: 0.7rem;
 }
+
 .small-bar {
   width: 50%;
   height: 2px;
@@ -146,6 +163,7 @@
   margin-left: -1rem;
   margin-right: -1rem;
   display: flex;
+  flex-wrap: wrap;
 }
 .col {
   display: flex;
@@ -305,10 +323,18 @@ footer {
 /* CLASSI RESPONSIVE */
 /*************** TABLET *******************/
 /****** FOOTER ********/
+
 /* SIZE - M (TABLET)  */
 @media screen and (max-width: 991px) {
   .container-footer {
     font-size: 0.7rem;
+  }
+  .col {
+    width: calc(100% / 4);
+  }
+  .categorie {
+    width: calc(100% / 5);
+    font-size: 0.6rem;
   }
 }
 /* SIZE - S  */
@@ -319,6 +345,12 @@ footer {
   }
   #footer-center > * {
     font-size: 0.9rem;
+  }
+  .col {
+    width: calc(100% / 2);
+  }
+  .categorie {
+    width: calc(100% / 3);
   }
 }
 /* SIZE - xS  */
@@ -332,5 +364,30 @@ footer {
   }
   #footer-center > * {
     font-size: 0.8rem;
+  }
+  .sidebar {
+    width: 50px;
+  }
+  .container-sidebar {
+    display: none;
+  }
+  .container-sidebar-media {
+    display: flex;
+  }
+  .side-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .one-up {
+    align-items: center;
+  }
+  .categorie {
+    width: calc(100% / 4);
+    font-size: 0.6rem;
+  }
+  .main-content {
+    height: calc(100vh - 100px);
+    width: calc(100% - 50px);
   }
 }
