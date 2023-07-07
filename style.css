@@ -5,6 +5,9 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+img {
+  max-width: 100%;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -43,6 +46,7 @@
   padding: 20px;
   height: 100%;
 }
+
 .container-sidebar-media {
   flex-direction: column;
   display: flex;
@@ -120,6 +124,7 @@
   background-color: #141922;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 .container-categorie {
   color: gray;
@@ -139,21 +144,22 @@
   white-space: nowrap;
   font-size: 0.7rem;
 }
-
+.container-small-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .small-bar {
-  width: 50%;
+  width: 60%;
   height: 2px;
   background-color: lime;
-  /* display: none; */
+  display: none;
 }
-/* .categorie:hover + {
-  display: block;
-} */
+
 /* CASSI ALBUMS */
 .container-album {
   width: 100%;
   padding: 0 1rem;
-  overflow: auto;
 }
 .container-album > h2 {
   color: white;
@@ -221,6 +227,7 @@ header {
   border: solid white;
   color: white;
   border-radius: 15px;
+  margin: 0 20px;
 }
 /* CASSI FOOTER */
 footer {
@@ -287,7 +294,7 @@ footer {
 }
 
 .time-bar {
-  height: 2px;
+  height: 3px;
   width: 300px;
   background-color: gray;
 }
@@ -296,6 +303,7 @@ footer {
   height: 2px;
   width: 100px;
   background-color: white;
+  position: relative;
 }
 /* CASSI FOOTER RIGHT */
 #footer-right {
@@ -315,11 +323,107 @@ footer {
 }
 
 .min-small {
-  height: 2px;
+  height: 3px;
   width: 33px;
   background-color: white;
+  position: relative;
+}
+/* CLASSI EFFETTI HOVER */
+.upgrade-button:hover {
+  transform: scale(1.1);
+}
+.categorie:hover {
+  color: white;
+}
+.white-hoover:hover {
+  color: white;
+}
+li:hover {
+  color: white;
+}
+.lay-hover {
+  background-color: rgba(8, 11, 18, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
 }
 
+.img-container {
+  position: relative;
+}
+
+.lay-hover > i {
+  font-size: 7rem;
+  color: white;
+}
+.album-card:hover .lay-hover {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle-pic:hover .lay-hover {
+  display: block;
+}
+.categorie:hover .small-bar {
+  display: block;
+}
+.play:hover {
+  transform: scale(1.1);
+}
+.song-name span:hover {
+  color: white;
+  text-decoration: underline;
+}
+.footer-icons i:hover {
+  color: white;
+}
+.home:hover {
+  box-shadow: inset 10px 0px 0px -8px lime;
+}
+.cerca:hover {
+  box-shadow: inset 10px 0px 0px -8px lime;
+}
+.libreria:hover {
+  box-shadow: inset 10px 0px 0px -8px lime;
+}
+.ball {
+  width: 15px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.ball-small {
+  width: 10px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.time-bar:hover .ball {
+  display: block;
+}
+.time-bar-small:hover .ball-small {
+  display: block;
+}
+.time-bar:hover .min {
+  background-color: lime;
+}
+.time-bar-small:hover .min-small {
+  background-color: lime;
+}
 /* CLASSI RESPONSIVE */
 /*************** TABLET *******************/
 /****** FOOTER ********/
